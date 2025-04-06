@@ -38,18 +38,24 @@
 }
 
 .welcome-button {
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 2rem;
     font-size: 1rem;
-    background-color: rgba(0, 123, 255, 0.85);
-    color: white;
-    border: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
 }
 
 .welcome-button:hover {
-    background-color: rgba(0, 123, 255, 1);
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.05);
 }
 
 .welcome-features {

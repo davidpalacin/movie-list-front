@@ -1,14 +1,14 @@
-import './App.css'
-import Welcome from './components/Welcome/Welcome'
+import { Route, Switch } from 'wouter';
+import Welcome from './components/Welcome/Welcome';
+import Login from './components/Login/Login';
 
 function App() {
   return (
-    <>
-      <div>
-        <Welcome />
-      </div>
-    </>
-  )
+    <Switch>
+      <Route path="/" component={Welcome} />
+      <Route path="/login" component={Login} />
+    </Switch>
+  );
 }
 
-export default App
+export default App;

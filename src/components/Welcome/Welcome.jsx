@@ -1,7 +1,10 @@
 import { useEffect } from 'react';
 import './Welcome.css';
+import { useLocation } from 'wouter';
+
 
 function Welcome() {
+    const [, navigate] = useLocation();
 
     return (
         <div className="welcome-container">
@@ -9,7 +12,9 @@ function Welcome() {
                 <div className="welcome-hero">
                     <h1 className="welcome-title">MyMovieList</h1>
                     <p className="welcome-subtitle">Organiza y descubre tus películas favoritas</p>
-                    <button className="welcome-button">Empezar</button>
+                    <button className="welcome-button" onClick={() => navigate('/login')}>
+                        Empezar
+                    </button>
                 </div>
 
                 <div className="welcome-features">
