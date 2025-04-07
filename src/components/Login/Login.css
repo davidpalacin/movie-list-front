@@ -1,28 +1,62 @@
 .login-container {
+    position: relative;
     height: 100vh;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-background {
+    position: absolute;
+    inset: 0;
+    background: url('/src/assets/bg-cinema.jpg') no-repeat center center/cover;
+    filter: brightness(0.4) blur(2px);
+    z-index: 0;
+}
+
+.login-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: #0d0d0d;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
     color: white;
+    padding: 2rem;
+}
+
+.login-brand {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+    animation: bounceIn 1s ease-out;
+}
+
+.brand-white {
+    color: #ffffff;
+}
+
+.brand-color {
+    color: #e63697;
 }
 
 .login-box {
     background-color: rgba(255, 255, 255, 0.05);
     padding: 3rem 2.5rem;
     border-radius: 12px;
-    backdrop-filter: blur(4px);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
     width: 100%;
     max-width: 400px;
 }
 
 .login-title {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .login-form {
@@ -47,16 +81,62 @@
 .login-button {
     padding: 0.75rem;
     font-size: 1rem;
+    font-weight: 500;
     background-color: rgba(255, 255, 255, 0.15);
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .login-button:hover {
     background-color: rgba(255, 255, 255, 0.25);
     border-color: rgba(255, 255, 255, 0.6);
     transform: scale(1.03);
+}
+
+.login-register-text {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.login-register-link {
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.login-register-link:hover {
+    color: #1e90ff;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+
+    70% {
+        transform: translateY(-5px);
+    }
+
+    85% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
