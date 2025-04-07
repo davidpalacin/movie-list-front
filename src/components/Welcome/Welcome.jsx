@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import './Welcome.css';
 import { useLocation } from 'wouter';
 
