@@ -121,3 +121,11 @@
 .welcome-overlay {
     overflow: hidden;
 }
+
+.brand-white {
+    color: #ffffff;
+}
+
+.brand-color {
+    color: #e63697;
+}

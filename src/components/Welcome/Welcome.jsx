@@ -9,7 +9,11 @@ function Welcome() {
         <div className="welcome-container">
             <div className="welcome-overlay">
                 <div className="welcome-hero">
-                    <h1 className="welcome-title">MyMovieList</h1>
+                    <h1 className="welcome-title">
+                        <span className="brand-white">My</span>
+                        <span className="brand-color">MovieList</span>
+                    </h1>
+
                     <p className="welcome-subtitle">Organiza y descubre tus películas favoritas</p>
                     <button className="welcome-button" onClick={() => navigate('/login')}>
                         Empezar
