@@ -38,7 +38,7 @@ function Login() {
             <div className="login-background"></div>
 
             <div className="login-content">
-                <h1 className="login-brand">
+                <h1 className="login-brand" onClick={() => navigate('/')}>
                     <span className="brand-white">My</span>
                     <span className="brand-color">MovieList</span>
                 </h1>

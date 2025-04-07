@@ -32,6 +32,7 @@
     letter-spacing: 1px;
     text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
     animation: bounceIn 1s ease-out;
+    cursor: pointer;
 }
 
 .brand-white {
