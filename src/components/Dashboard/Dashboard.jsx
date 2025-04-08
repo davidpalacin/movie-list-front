@@ -2,6 +2,8 @@ import './Dashboard.css';
 import Sidebar from './Sidebar';
 import { useEffect, useState } from 'react';
 import { useUserStore } from '../../store/userStore';
+import MovieGrid from './MovieGrid/MovieGrid';
+
 
 
 function Dashboard() {
@@ -39,7 +41,7 @@ function Dashboard() {
                 </button>
 
                 <h1 className="dashboard-title">Hola, {user?.name}</h1>
-                {/* Aquí irá el contenido */}
+                <MovieGrid />
             </div>
         </div>
     );

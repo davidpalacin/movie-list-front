@@ -26,12 +26,6 @@
     display: none;
 }
 
-@media (max-width: 480px) {
-    .dashboard-logo {
-        display: block;
-    }
-}
-
 .dashboard-title {
     font-size: 2rem;
     font-weight: 600;
@@ -54,5 +48,13 @@
 @media (max-width: 480px) {
     .hamburger-button {
         display: block;
+    }
+
+    .dashboard-logo {
+        display: block;
+    }
+
+    .dashboard-title {
+        font-size: 1.5rem;
     }
 }
