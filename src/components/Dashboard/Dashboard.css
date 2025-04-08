@@ -1,0 +1,58 @@
+.dashboard {
+    display: flex;
+    height: 100vh;
+    background-color: #181818;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.dashboard-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-logo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .dashboard-logo {
+        display: block;
+    }
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hamburger-button {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+@media (max-width: 480px) {
+    .hamburger-button {
+        display: block;
+    }
+}
