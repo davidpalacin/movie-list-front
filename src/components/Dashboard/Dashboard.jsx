@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 function Dashboard() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const user = JSON.parse(localStorage.getItem('user'));
 
     return (
         <div className="dashboard">
@@ -31,7 +32,7 @@ function Dashboard() {
                     ☰
                 </button>
 
-                <h1 className="dashboard-title">Bienvenido a tu espacio</h1>
+                <h1 className="dashboard-title">Hola, {user?.name}</h1>
                 {/* Aquí irá el contenido */}
             </div>
         </div>
