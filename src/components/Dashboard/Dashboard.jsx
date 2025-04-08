@@ -1,10 +1,16 @@
 import './Dashboard.css';
 import Sidebar from './Sidebar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useUserStore } from '../../store/userStore';
+
 
 function Dashboard() {
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const user = JSON.parse(localStorage.getItem('user'));
+    const { user, loadUserFromStorage } = useUserStore();
+
+    useEffect(() => {
+        loadUserFromStorage();
+    }, []);
 
     return (
         <div className="dashboard">
