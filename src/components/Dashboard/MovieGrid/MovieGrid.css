@@ -59,6 +59,11 @@
     color: #ccc;
 }
 
+.movie-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .movie-card:hover {
     transform: scale(1.03);
 }

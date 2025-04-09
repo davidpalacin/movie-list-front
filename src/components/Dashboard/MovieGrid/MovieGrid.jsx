@@ -1,6 +1,8 @@
 import './MovieGrid.css';
 import { useState } from 'react';
 import { fakeMovies } from '../../../data/fakeMovies';
+import { navigate } from 'wouter/use-hash-location';
+import { Link } from 'wouter';
 
 function MovieGrid() {
     const [currentPage, setCurrentPage] = useState(1);
@@ -35,12 +37,14 @@ function MovieGrid() {
 
             <div className="movie-grid">
                 {currentMovies.map((movie) => (
-                    <div key={movie.id} className="movie-card">
-                        <img src={movie.poster} alt={movie.title} />
-                        <h3>{movie.title}</h3>
-                        <p>{movie.genres.join(', ')}</p>
-                        <span>{movie.year} · ⭐ {movie.rating}</span>
-                    </div>
+                    <Link href={`/dashboard/movie/${movie.id}`} className={"movie-card-link"}>
+                        <div key={movie.id} className="movie-card">
+                            <img src={movie.poster} alt={movie.title} />
+                            <h3>{movie.title}</h3>
+                            <p>{movie.genres.join(', ')}</p>
+                            <span>{movie.year} · ⭐ {movie.rating}</span>
+                        </div>
+                    </Link>
                 ))}
             </div>
 
